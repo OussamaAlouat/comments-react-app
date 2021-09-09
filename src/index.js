@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './app.css'
 import faker from 'faker'
+import useForceUpdate from 'use-force-update';
+
 faker.locale = "es";
 
 function getRandomNumber (min, max) {
@@ -60,7 +62,15 @@ function getCommentaries () {
 }
 
 
+
 const App = () => {
+
+  const forceUpdate = useForceUpdate();
+
+  const handleClick = React.useCallback(() => {
+    forceUpdate();
+  }, [forceUpdate]);
+
   return (
     <div className="container">
       <div className="title-section">
@@ -69,6 +79,8 @@ const App = () => {
       <div className="comments-section">
         { getCommentaries() }
       </div>
+
+      <button onClick={ handleClick } className="ui button">Refresh</button>
     </div>
   )
 };
