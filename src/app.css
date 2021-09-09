@@ -8,3 +8,16 @@
 .comments-section {
   margin-top: 2rem;
 }
+
+h3 {
+  margin-bottom: 0;
+}
+
+img {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.content {
+  padding-left: 22px;
+}
