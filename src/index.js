@@ -8,10 +8,30 @@ function getRandomNumber (min, max) {
   return Math.ceil(Math.random() * (max - min) + min);
 }
 
+function getFaves(num) {
+  const faves = [];
+  for (let i = 0; i < num; i++) {
+    faves.push(
+      <i className="star icon star-color"></i>
+    )
+  }
+
+  if (num < 5) {
+    for (let j = faves.length; j < 5; j++) {
+      faves.push(
+        <i className="star icon"></i>
+      )
+    }
+  }
+
+  return faves;
+}
+
 function getCommentaries () {
   const commentaries = [];
   const randomNumber = getRandomNumber(3, 10);
   for (let i = 0; i < randomNumber; i++) {
+    const favesRandom = getRandomNumber(1, 5);
     commentaries.push(
       <div className="ui comments" >
         <div className="comment">
@@ -24,8 +44,8 @@ function getCommentaries () {
             <div className="metadata">
               <div className="date">{ getRandomNumber(1, 10) } days ago</div>
             <div className="rating">
-              <i className="star icon"></i>
-              { getRandomNumber(1, 5) } Faves
+              { getFaves(favesRandom) }
+               Faves
             </div>
           </div>
             <div className="text">
