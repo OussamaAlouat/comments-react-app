@@ -15,12 +15,13 @@ h3 {
 }
 
 img {
-  width: 68px !important;
-  height: 68px !important;
+  width: 64px !important;
+  height: 64px !important;
 }
 
 .content {
   padding-left: 30px;
+  height: 64px;
 }
 
 .star-color {
