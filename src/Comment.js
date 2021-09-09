@@ -31,7 +31,7 @@ const Comment = (props) => {
         </i>
 
         <div className="content">
-          <h3 className="author">{ props.name }</h3>
+          <span className="author">{ props.name }</span>
           <div className="metadata">
             <div className="date">{ props.date} days ago</div>
             <div className="rating">
