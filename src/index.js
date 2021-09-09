@@ -45,7 +45,6 @@ function getCommentaries () {
               <div className="date">{ getRandomNumber(1, 10) } days ago</div>
             <div className="rating">
               { getFaves(favesRandom) }
-               Faves
             </div>
           </div>
             <div className="text">
