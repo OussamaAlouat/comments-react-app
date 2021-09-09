@@ -8,15 +8,15 @@ const App = () => {
     <div className="container">
       <h1>Wellcome to Comment APP</h1>
       <div className="comments-section">
-        <div className="ui comments">
+        <div className="ui comments" >
           <div className="comment">
 
             <a className="avatar">
-              <img src={faker.image.avatar()}/>
+              <img src={faker.image.avatar()} alt="avatar"/>
             </a>
 
             <div className="content">
-              <a className="author">{faker.name.firstName()}</a>
+              <h3 className="author">{faker.name.firstName()}</h3>
               <div className="metadata">
                 <div className="date">2 days ago</div>
                 <div className="rating">
@@ -25,7 +25,7 @@ const App = () => {
                 </div>
               </div>
               <div className="text">
-                Hey guys, I hope this example comment is helping you read this documentation.
+                {faker.lorem.sentence()}
               </div>
             </div>
           </div>
@@ -36,11 +36,11 @@ const App = () => {
           <div className="comment">
 
             <a className="avatar">
-              <img src={faker.image.avatar()}/>
+              <img src={faker.image.avatar()} alt="avatar"/>
             </a>
 
             <div className="content">
-              <a className="author">{faker.name.firstName()}</a>
+              <h3 className="author">{faker.name.firstName()}</h3>
               <div className="metadata">
                 <div className="date">2 days ago</div>
                 <div className="rating">
@@ -49,7 +49,7 @@ const App = () => {
                 </div>
               </div>
               <div className="text">
-                Hey guys, I hope this example comment is helping you read this documentation.
+                { faker.lorem.sentence() }
               </div>
             </div>
           </div>
@@ -60,11 +60,11 @@ const App = () => {
           <div className="comment">
 
             <a className="avatar">
-              <img src={faker.image.avatar()}/>
+              <img src={faker.image.avatar()} alt="avatar"/>
             </a>
 
             <div className="content">
-              <a className="author">{faker.name.firstName()}</a>
+              <h3 className="author">{faker.name.firstName()}</h3>
               <div className="metadata">
                 <div className="date">2 days ago</div>
                 <div className="rating">
@@ -73,7 +73,7 @@ const App = () => {
                 </div>
               </div>
               <div className="text">
-                Hey guys, I hope this example comment is helping you read this documentation.
+                { faker.lorem.sentence() }
               </div>
             </div>
           </div>
