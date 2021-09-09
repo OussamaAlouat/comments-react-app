@@ -1,12 +1,11 @@
 .container {
   display: flex;
-  padding-top: 20px;
   flex-direction: column;
   align-items: center;
 }
 
 .comments-section {
-  margin-top: 2rem;
+  margin-top: calc(120px + 2rem);
 }
 
 h3 {
@@ -27,6 +26,8 @@ img {
 }
 
 .title-section {
+  position: fixed;
+  z-index: 2;
   display: flex;
   width: 100%;
   min-height: 120px;
@@ -34,4 +35,5 @@ img {
   align-items: center;
   background-color: grey;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

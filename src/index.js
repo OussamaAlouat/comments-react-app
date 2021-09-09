@@ -17,7 +17,7 @@ function getCommentaries () {
   const randomNumber = getRandomNumber(3, 10);
   for (let i = 0; i < randomNumber; i++) {
     commentaries.push(
-      <Comment></Comment>
+      <Comment key={`key--${i}`}></Comment>
     )
   }
 
