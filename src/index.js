@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './app.css'
 import faker from 'faker'
+faker.locale = "es";
 
 const App = () => {
   return (
