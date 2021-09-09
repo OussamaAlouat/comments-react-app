@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import './app.css'
+import faker from 'faker'
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
           <div className="comment">
 
             <a className="avatar">
-              <img src="/images/avatar/small/stevie.jpg"/>
+              <img src={faker.image.avatar()}/>
             </a>
 
             <div className="content">
