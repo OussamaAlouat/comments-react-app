@@ -18,6 +18,7 @@ function getCommentaries () {
   for (let i = 0; i < randomNumber; i++) {
     commentaries.push(
       <Comment
+        style={{ marginBottom: '10px'}}
         key={`key--${i}`}
         text={ faker.lorem.sentence() }
         name={ faker.name.firstName() }
