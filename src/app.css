@@ -6,6 +6,8 @@
 
 .comments-section {
   margin-top: calc(120px + 2rem);
+  width: 100%;
+  padding-left: 20px;
 }
 
 h3 {
@@ -13,8 +15,8 @@ h3 {
 }
 
 img {
-  width: 64px !important;
-  height: 64px !important;
+  width: 68px !important;
+  height: 68px !important;
 }
 
 .content {
@@ -35,5 +37,15 @@ img {
   align-items: center;
   background-color: grey;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#root {
+  background: rgba(0, 0, 0, 0.01);
+  height: 100%;
+}
+
+.fix-btn {
+  position: fixed;
+  bottom: 20px;
 }

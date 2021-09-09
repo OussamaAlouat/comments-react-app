@@ -26,7 +26,6 @@ function getFaves(num) {
   return faves;
 }
 
-
 const Comment = () => {
   const favesRandom = getRandomNumber(1, 5);
 

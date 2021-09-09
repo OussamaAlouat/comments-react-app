@@ -42,7 +42,9 @@ const App = () => {
         { getCommentaries() }
       </div>
 
-      <button onClick={ handleClick } className="ui button">Refresh</button>
+      <button onClick={ handleClick } className="ui button fix-btn">
+        Refresh
+      </button>
     </div>
   )
 };
