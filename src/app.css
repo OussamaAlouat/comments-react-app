@@ -1,5 +1,10 @@
 .container {
   display: flex;
-  justify-content: center;
   padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comments-section {
+  margin-top: 2rem;
 }
