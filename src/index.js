@@ -63,7 +63,9 @@ function getCommentaries () {
 const App = () => {
   return (
     <div className="container">
-      <h1>Wellcome to Comment APP</h1>
+      <div className="title-section">
+        <h1>Wellcome to Comment APP</h1>
+      </div>
       <div className="comments-section">
         { getCommentaries() }
       </div>
