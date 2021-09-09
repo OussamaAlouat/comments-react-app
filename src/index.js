@@ -17,7 +17,14 @@ function getCommentaries () {
   const randomNumber = getRandomNumber(3, 10);
   for (let i = 0; i < randomNumber; i++) {
     commentaries.push(
-      <Comment key={`key--${i}`}></Comment>
+      <Comment
+        key={`key--${i}`}
+        text={ faker.lorem.sentence() }
+        name={ faker.name.firstName() }
+        avatar={ faker.image.avatar() }
+        rave={ getRandomNumber(1,5) }
+        date={ getRandomNumber(1,10) }
+      />
     )
   }
 
