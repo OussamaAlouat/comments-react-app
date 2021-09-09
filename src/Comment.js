@@ -11,14 +11,14 @@ function getFaves(num) {
   const faves = [];
   for (let i = 0; i < num; i++) {
     faves.push(
-      <i className="star icon star-color"></i>
+      <i className="star icon star-color"  key={i}></i>
     )
   }
 
   if (num < 5) {
     for (let j = faves.length; j < 5; j++) {
       faves.push(
-        <i className="star icon"></i>
+        <i className="star icon" key={j}></i>
       )
     }
   }
