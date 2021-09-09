@@ -4,9 +4,13 @@ import './app.css'
 import faker from 'faker'
 faker.locale = "es";
 
+function getRandomNumber (min, max) {
+  return Math.ceil(Math.random() * (max - min) + min);
+}
+
 function getCommentaries () {
   const commentaries = [];
-  const randomNumber = Math.random() * (10 - 3) + 3;
+  const randomNumber = getRandomNumber(3, 10);
   for (let i = 0; i < randomNumber; i++) {
     commentaries.push(
       <div className="ui comments" >
@@ -18,10 +22,10 @@ function getCommentaries () {
           <div className="content">
             <h3 className="author">{ faker.name.firstName() }</h3>
             <div className="metadata">
-              <div className="date">2 days ago</div>
+              <div className="date">{ getRandomNumber(1, 10) } days ago</div>
             <div className="rating">
               <i className="star icon"></i>
-              5 Faves
+              { getRandomNumber(1, 5) } Faves
             </div>
           </div>
             <div className="text">
