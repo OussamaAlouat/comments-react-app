@@ -1,17 +1,76 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
+import './app.css'
+import faker from 'faker'
+faker.locale = "es";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function getRandomNumber (min, max) {
+  return Math.ceil(Math.random() * (max - min) + min);
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function getFaves(num) {
+  const faves = [];
+  for (let i = 0; i < num; i++) {
+    faves.push(
+      <i className="star icon star-color"></i>
+    )
+  }
+
+  if (num < 5) {
+    for (let j = faves.length; j < 5; j++) {
+      faves.push(
+        <i className="star icon"></i>
+      )
+    }
+  }
+
+  return faves;
+}
+
+function getCommentaries () {
+  const commentaries = [];
+  const randomNumber = getRandomNumber(3, 10);
+  for (let i = 0; i < randomNumber; i++) {
+    const favesRandom = getRandomNumber(1, 5);
+    commentaries.push(
+      <div className="ui comments" >
+        <div className="comment">
+          <a className="avatar">
+            <img src={ faker.image.avatar() } alt="avatar"/>
+          </a>
+
+          <div className="content">
+            <h3 className="author">{ faker.name.firstName() }</h3>
+            <div className="metadata">
+              <div className="date">{ getRandomNumber(1, 10) } days ago</div>
+            <div className="rating">
+              { getFaves(favesRandom) }
+            </div>
+          </div>
+            <div className="text">
+              { faker.lorem.sentence() }
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  return commentaries;
+}
+
+
+const App = () => {
+  return (
+    <div className="container">
+      <div className="title-section">
+        <h1>Wellcome to Comment APP</h1>
+      </div>
+      <div className="comments-section">
+        { getCommentaries() }
+      </div>
+    </div>
+  )
+};
+
+ReactDom.render(<App/>, document.querySelector('#root'))
