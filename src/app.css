@@ -45,8 +45,3 @@ img {
   background: rgba(0, 0, 0, 0.01);
   height: 100%;
 }
-
-.fix-btn {
-  position: fixed;
-  bottom: 20px;
-}

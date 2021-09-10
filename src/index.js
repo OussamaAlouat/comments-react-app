@@ -57,7 +57,7 @@ const App = () => {
         </div>
       </div>
 
-      <button onClick={ handleClick } className="ui button fix-btn">
+      <button onClick={ handleClick } className="ui button" style={{marginBottom: '10px'}}>
         Refresh
       </button>
     </div>
