@@ -4,6 +4,7 @@ import './app.css'
 import faker from 'faker'
 import useForceUpdate from 'use-force-update';
 import Comment from './Comment'
+import ApprovalCard from './ApprovalCard'
 
 faker.locale = "es";
 
@@ -48,6 +49,9 @@ const App = () => {
       </div>
       <div className="comments-section">
         { getCommentaries() }
+      </div>
+      <div classNameName="ui cards">
+        <ApprovalCard />
       </div>
 
       <button onClick={ handleClick } className="ui button fix-btn">
