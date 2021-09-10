@@ -18,7 +18,9 @@ function getCommentaries () {
   const randomNumber = getRandomNumber(3, 10);
   for (let i = 0; i < randomNumber; i++) {
     commentaries.push(
-      <ApprovalCard>
+      <ApprovalCard
+        key={`key--${i}--key--${i+1}`}
+      >
         <Comment
           style={{ marginBottom: '10px'}}
           key={`key--${i}`}
@@ -49,7 +51,7 @@ const App = () => {
       <div className="title-section">
         <h1>Wellcome to Comment APP</h1>
       </div>
-      <div classNameName="ui cards">
+      <div className="ui cards">
         <div className="comments-section">
           { getCommentaries() }
         </div>
