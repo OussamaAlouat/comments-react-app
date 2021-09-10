@@ -3,10 +3,6 @@ import faker from 'faker'
 
 faker.locale = "es";
 
-function getRandomNumber (min, max) {
-  return Math.ceil(Math.random() * (max - min) + min);
-}
-
 function getFaves(num) {
   const faves = [];
   for (let i = 0; i < num; i++) {
@@ -26,27 +22,24 @@ function getFaves(num) {
   return faves;
 }
 
-
-const Comment = () => {
-  const favesRandom = getRandomNumber(1, 5);
-
+const Comment = (props) => {
   return (
     <div className="ui comments">
       <div className="comment">
         <i className="avatar">
-          <img src={ faker.image.avatar() } alt="avatar"/>
+          <img src={ props.avatar } alt="avatar"/>
         </i>
 
         <div className="content">
-          <h3 className="author">{ faker.name.firstName() }</h3>
+          <span className="author">{ props.name }</span>
           <div className="metadata">
-            <div className="date">{ getRandomNumber(1, 10) } days ago</div>
+            <div className="date">{ props.date} days ago</div>
             <div className="rating">
-              { getFaves(favesRandom) }
+              { getFaves(props.rave) }
             </div>
           </div>
           <div className="text">
-            { faker.lorem.sentence() }
+            { props.text }
           </div>
         </div>
       </div>
