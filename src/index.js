@@ -4,6 +4,7 @@ import './app.css'
 import faker from 'faker'
 import useForceUpdate from 'use-force-update';
 import Comment from './Comment'
+import ApprovalCard from './ApprovalCard'
 
 faker.locale = "es";
 
@@ -17,15 +18,19 @@ function getCommentaries () {
   const randomNumber = getRandomNumber(3, 10);
   for (let i = 0; i < randomNumber; i++) {
     commentaries.push(
-      <Comment
-        style={{ marginBottom: '10px'}}
-        key={`key--${i}`}
-        text={ faker.lorem.sentence() }
-        name={ faker.name.firstName() }
-        avatar={ faker.image.avatar() }
-        rave={ getRandomNumber(1,5) }
-        date={ getRandomNumber(1,10) }
-      />
+      <ApprovalCard
+        key={`key--${i}--key--${i+1}`}
+      >
+        <Comment
+          style={{ marginBottom: '10px'}}
+          key={`key--${i}`}
+          text={ faker.lorem.sentence() }
+          name={ faker.name.firstName() }
+          avatar={ faker.image.avatar() }
+          rave={ getRandomNumber(1,5) }
+          date={ getRandomNumber(1,10) }
+        />
+      </ApprovalCard>
     )
   }
 
@@ -46,8 +51,10 @@ const App = () => {
       <div className="title-section">
         <h1>Wellcome to Comment APP</h1>
       </div>
-      <div className="comments-section">
-        { getCommentaries() }
+      <div className="ui cards">
+        <div className="comments-section">
+          { getCommentaries() }
+        </div>
       </div>
 
       <button onClick={ handleClick } className="ui button fix-btn">
